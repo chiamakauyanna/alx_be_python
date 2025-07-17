@@ -15,8 +15,8 @@
 # A message should be ‘that requires immediate attention today!’
 
 task = input('Enter yor task: ')
-priority = input('Priority (high, medium, low): ').lower()
-time_bound = input('is it time-bound? (yes or no): ').lower()
+priority = input('Priority (high, medium, low): ')
+time_bound = input('Is it time-bound? (yes or no): ')
 
 match priority:
   case 'high' | 'medium' | 'low':
