@@ -4,13 +4,13 @@ operation = input('Choose the operation (+, -, *, /): ')
 
 match operation:
   case '+':
-    print(num1 + num2)
+    print('The result is' ,num1 + num2)
   case '-':
-    print(num1 - num2)
+    print('The result is' ,num1 - num2)
   case '*':
-    print(num1 * num2)
+    print('The result is' ,num1 * num2)
   case '/':
-    print(num1 / num2)
+    print('The result is' ,num1 / num2)
     if num1 < 1 or num2 < 1:
       print('Cannot divide by 0')
   case _:
