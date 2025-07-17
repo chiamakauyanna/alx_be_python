@@ -14,15 +14,17 @@
 # Print a reminder about the task that includes its priority level and whether immediate action is required based on time sensitivity.
 # A message should be ‘that requires immediate attention today!’
 
-task = input('Enter yor task: ')
-priority = input('Priority (high, medium, low): ')
-time_bound = input('Is it time-bound? (yes or no): ')
+task = input('Enter your task: ')
+priority = input('Priority (high/medium/low): ').lower()
+time_bound = input('Is it time-bound? (yes/no): ').lower()
 
 match priority:
   case 'high' | 'medium' | 'low':
-    message = f'You have a task "{task}" with {priority} priority'
-    if time_bound == 'yes':
-      message += ', that requires immediate attention today!'
+    message = f"'{task}' is a {priority} priority task"
+    if time_bound == 'yes' and priority == 'high':
+      message += ' that requires immediate attention today!'
+    elif time_bound == 'no' and priority == 'low':
+      message += '. Consider completing it when you have free time.'
     print(message)
   case _:
      print("Invalid priority input.")
