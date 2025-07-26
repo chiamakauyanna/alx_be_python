@@ -28,15 +28,13 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            add_item = input('Input item name: ')
+            add_item = input('Enter the item to add: ')
             shopping_list.append(add_item)
-            print()
-            print('item added to shoping list')
+            print('item added to shopping list')
         elif choice == '2':
-            remove_item = input('What would you like to remove? ')
+            remove_item = input('Enter the item to remove: ')
             if remove_item in shopping_list:
                 shopping_list.remove(remove_item)
-                print()
                 print('item removed from shopping list')
             else:
                 print('Item not found in shopping list')
