@@ -33,20 +33,15 @@ class Library:
     def __init__(self):
         """Initialize library with an empty book list."""
         self.books = []
+
     def add_book(self, book):
         """Add a Book, EBook, or PrintBook to the library."""
         if isinstance(book, Book):
             self.books.append(book)
-            print(f"Added: {book}")
         else:
             print("Only instances of Book or its subclasses can be added.")
             
     def list_books(self):
         """List all books in the library."""
-        if not self.books:
-            print("Library is empty.")
-        else:
-            print("\nLibrary Collection:")
-
         for book in self.books:
-            print(f"- {book}")
+            print(book)
