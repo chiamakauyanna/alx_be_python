@@ -7,7 +7,7 @@ class Book:
 
    def __del__(self):
        """Destructor: Prints message when object is deleted."""
-       print(f"Deleting '{self.title}'")
+       print(f"Deleting {self.title}")
 
    def __str__(self):
        """String representation for human-readable output."""
